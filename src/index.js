@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// Milligram for default styling
+import "milligram"
+// Import browser router and rename as Router
+import {BrowserRouter as Router, Route} from "react-router-dom"
+
 
 ReactDOM.render(
+  <Router>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Route path="/" component={app}/>
+  </React.StrictMode>
+  </Router>,
   document.getElementById('root')
 );
 
