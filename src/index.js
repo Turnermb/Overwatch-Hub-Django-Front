@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// Milligram for default styling
+// Adds milligram for basic styling
 import "milligram"
 // Import browser router and rename as Router
 import {BrowserRouter as Router, Route} from "react-router-dom"
