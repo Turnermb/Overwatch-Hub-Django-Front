@@ -1,7 +1,8 @@
 import React from "react"
+import Post from "../components/post"
 
 const AllPosts = (props) => {
-    return <h1>AllPosts</h1>
+    return props.posts.map((post) => <Post post={post} key={post.id}/>)
 }
 
 export default AllPosts
