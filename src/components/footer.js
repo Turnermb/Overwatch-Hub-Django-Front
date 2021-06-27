@@ -1,7 +1,7 @@
 import React from "react"
 
 const Footer = (props) => {
-    return <h1>Footer</h1>
+    return <p className="footer">Powered by React and Ruby on Rails</p>
 }
 
 export default Footer

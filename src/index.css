@@ -17,3 +17,12 @@ code {
 .postLinks a {
 	color: white;
 }
+
+.footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	color: white;
+}

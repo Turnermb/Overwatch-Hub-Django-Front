@@ -57,6 +57,7 @@ function App() {
         <Route path="/new" render={(routerProps) => <Form {...routerProps}/>}/>
         <Route path="/edit" render={(routerProps) => <Form {...routerProps}/>}/>
       </Switch>
+      <Footer/>
     </div>
   );
 }
