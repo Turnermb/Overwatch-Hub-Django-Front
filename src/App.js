@@ -2,6 +2,7 @@
 import AllPosts from "./pages/AllPosts"
 import SinglePost from "./pages/SinglePost"
 import Form from "./pages/Form"
+import Header from "./components/header"
 
 // React and Hooks
 import React, {useState, useEffect} from "react"
@@ -118,6 +119,7 @@ function App(props) {
 
   return (
     <div className="App">
+      <Header/>
       <Link to="/new"><button style={button}><div style={plusDiv}>+</div> Add New Replay</button></Link>
       <Switch>
         <Route exact path="/" redirect="/posts"/>
