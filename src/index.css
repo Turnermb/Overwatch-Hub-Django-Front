@@ -1,7 +1,8 @@
 body {
 	color: white;
 	background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2016/11/29/1057025/84d8e269adecf142a42922d9fd971c5b.jpg");
-	background-size: 100%;
+	background-size: stretch;
+	background-repeat: no-repeat;
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -19,11 +20,6 @@ code {
 	color: white;
 }
 
-.footer {
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	left: 0;
-	text-align: center;
-	color: white;
+.postLinks a:hover {
+	color: lightskyblue;
 }

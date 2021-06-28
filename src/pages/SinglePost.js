@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from "react-router-dom"
 
-const SinglePost = ({posts, match}) => {
+const SinglePost = ({posts, match, edit}) => {
     const id = parseInt(match.params.id)
     const post = posts.find((post) => post.id === id)
 
@@ -26,10 +26,10 @@ const SinglePost = ({posts, match}) => {
             <h3>Lobby SR: {post.lobby_sr}</h3>
             <h3>Replay Code: {post.replay_code}</h3>
             <h3>{post.details}</h3>
+            <button style={button} onClick={(e) => {edit(post)}}>Edit Replay Information</button>
             <Link to="/posts">
                 <button style={button}>Back</button>
             </Link>
-
         </div>
     )
 }
