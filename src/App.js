@@ -122,8 +122,7 @@ function App(props) {
       <Header/>
       <Link to="/new"><button style={button}><div style={plusDiv}>+</div> Add New Replay</button></Link>
       <Switch>
-        <Route exact path="/" redirect="/posts"/>
-        <Route exact path="/posts" render={(routerProps) => <AllPosts {...routerProps} posts={posts}/>}/>
+        <Route exact path="/" render={(routerProps) => <AllPosts {...routerProps} posts={posts}/>}/>
         <Route path="/post/:id" render={(routerProps) => <SinglePost {...routerProps} posts={posts} edit={getTargetPost} deletePost={deletePost}/>}/>
         <Route path="/new" render={(routerProps) => <Form {...routerProps} initialPost={nullPost} handleSubmit={addPosts}/>}/>
         <Route path="/edit" render={(routerProps) => <Form {...routerProps} initialPost={targetPost} handleSubmit={updatePost} />}/>
