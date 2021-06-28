@@ -76,6 +76,15 @@ function App(props) {
     getPosts()
   }
 
+  const deletePost = async (post) => {
+    const response = await fetch(url + post.id, {
+      method: "delete"
+    })
+
+    getPosts()
+    props.history.push("/posts")
+  }
+
 
 
   //////////
@@ -113,7 +122,7 @@ function App(props) {
       <Switch>
         <Route exact path="/" redirect="/posts"/>
         <Route exact path="/posts" render={(routerProps) => <AllPosts {...routerProps} posts={posts}/>}/>
-        <Route path="/post/:id" render={(routerProps) => <SinglePost {...routerProps} posts={posts} edit={getTargetPost}/>}/>
+        <Route path="/post/:id" render={(routerProps) => <SinglePost {...routerProps} posts={posts} edit={getTargetPost} deletePost={deletePost}/>}/>
         <Route path="/new" render={(routerProps) => <Form {...routerProps} initialPost={nullPost} handleSubmit={addPosts}/>}/>
         <Route path="/edit" render={(routerProps) => <Form {...routerProps} initialPost={targetPost} handleSubmit={updatePost} />}/>
       </Switch>
