@@ -41,7 +41,7 @@ const SinglePost = ({posts, match, edit, deletePost}) => {
             <div className="buttonDiv" style={buttonDiv}>
                 <button style={button} onClick={(e) => {edit(post)}}>Edit Replay Information</button>
                 <button style={button} onClick={(e) => {deletePost(post)}}>Delete Replay Information</button>
-                <Link to="/posts">
+                <Link to="/">
                     <button style={button}>Back</button>
                 </Link>
             </div>

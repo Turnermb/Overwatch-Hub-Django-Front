@@ -1,11 +1,11 @@
-import React, {use} from "react"
+import React from "react"
 import Post from "../components/post"
 
 const AllPosts = (props) => {
 
     const img = {
         height: "2%",
-        width: "3.5%",
+        width: "2.5%",
     }
 
     const h1 = {
@@ -20,7 +20,7 @@ const AllPosts = (props) => {
     }
 
     const loading = () => {
-        return <h1 style={h1}>L<img style={img} src="https://www.seekpng.com/png/full/13-134284_the-largest-collection-of-overwatch-shirts-hoodies-overwatch.png"/>ADING...</h1>
+        return <h1 style={h1}>L<img style={img} src="https://www.seekpng.com/png/full/13-134284_the-largest-collection-of-overwatch-shirts-hoodies-overwatch.png" alt="Overwatch Logo"/>ADING...</h1>
     }
 
     return (

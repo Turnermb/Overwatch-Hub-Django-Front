@@ -83,7 +83,7 @@ function App(props) {
     })
 
     getPosts()
-    props.history.push("/posts")
+    props.history.push("/")
   }
 
 

@@ -14,7 +14,7 @@ const Form = ({initialPost, handleSubmit, history}) => {
     const handleSubmission = (e) => {
         e.preventDefault()
         handleSubmit(formData)
-        history.push("/posts")
+        history.push("/")
     }
     
     const input = {  
@@ -61,7 +61,7 @@ const Form = ({initialPost, handleSubmit, history}) => {
                 <input style={input} type="text" onChange={handleChange} value={formData.details} name="details"/>
                 <input style={button} type="submit" value="Submit"/>
             </form>
-            <Link to="/posts"><button style={button}>Back</button></Link>
+            <Link to="/"><button style={button}>Cancel</button></Link>
         </>
     )
 }
