@@ -1,11 +1,10 @@
 import React from "react"
 import {Link} from "react-router-dom"
 
-const SinglePost = ({posts, match, edit, deletePost}) => {
-    const id = parseInt(match.params.pk)
-    console.log(id)
-    const post = posts.find((post) => post.pk === id)
-    console.log(posts.pk)
+const SinglePost = (props, {posts, match, edit, deletePost}) => {
+    const id = parseInt(props.match.params.id)
+    const post = props.posts.find((post) => post.pk === id)
+    console.log(post)
 
     const div = {
         color: "white",
@@ -41,8 +40,8 @@ const SinglePost = ({posts, match, edit, deletePost}) => {
                 <h3>{post.fields.details}</h3>
             </div>
             <div className="buttonDiv" style={buttonDiv}>
-                <button style={button} onClick={(e) => {edit(post)}}>Edit Replay Information</button>
-                <button style={button} onClick={(e) => {deletePost(post)}}>Delete Replay Information</button>
+                <button style={button} onClick={(e) => {edit(post.fields)}}>Edit Replay Information</button>
+                <button style={button} onClick={(e) => {deletePost(post.fields)}}>Delete Replay Information</button>
                 <Link to="/">
                     <button style={button}>Back</button>
                 </Link>
