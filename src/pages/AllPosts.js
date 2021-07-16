@@ -16,7 +16,7 @@ const AllPosts = (props) => {
     }
 
     const loaded = () => {
-        return props.posts.map((post) => <Post post={post} key={post.id}/>)
+        return props.posts.map((post) => <Post post={post} key={post.pk}/>)
     }
 
     const loading = () => {

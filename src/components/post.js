@@ -12,8 +12,8 @@ const Post = ({post}) => {
 
     return (
         <div className="postLinks" style={div}>
-            <Link to={`/post/${post.id}`}>
-                <h4>{post.personal_sr} {post.role} - {post.details}</h4>
+            <Link to={`/post/${post.pk}`}>
+                <h4>{post.fields.personal_sr} {post.fields.role} - {post.fields.details}</h4>
             </Link>
             
         </div>

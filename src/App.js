@@ -20,7 +20,7 @@ function App(props) {
   //////////
 
   // API URL
-  const url = "https://overwatchhubmt.herokuapp.com/posts/"
+  const url = "https://overwatchhubdjango.herokuapp.com/"
 
   // State to hold posts for new
   const [posts, setPosts] = useState([])
@@ -66,7 +66,7 @@ function App(props) {
   }
 
   const updatePost = async (post) => {
-    const response = await fetch(url + post.id, {
+    const response = await fetch(url + post.pk, {
       method: "put",
       headers: {
         "Content-Type": "application/json"
@@ -78,7 +78,7 @@ function App(props) {
   }
 
   const deletePost = async (post) => {
-    const response = await fetch(url + post.id, {
+    const response = await fetch(url + post.pk, {
       method: "delete"
     })
 

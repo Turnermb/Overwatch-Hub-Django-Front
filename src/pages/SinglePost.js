@@ -2,8 +2,10 @@ import React from "react"
 import {Link} from "react-router-dom"
 
 const SinglePost = ({posts, match, edit, deletePost}) => {
-    const id = parseInt(match.params.id)
-    const post = posts.find((post) => post.id === id)
+    const id = parseInt(match.params.pk)
+    console.log(id)
+    const post = posts.find((post) => post.pk === id)
+    console.log(posts.pk)
 
     const div = {
         color: "white",
@@ -33,10 +35,10 @@ const SinglePost = ({posts, match, edit, deletePost}) => {
     return (
         <div style={div}>
             <div className="contentDiv" style={contentDiv}>
-                <h2>{post.battletag} - {post.personal_sr} {post.role}</h2>
-                <h3>Lobby SR: {post.lobby_sr}</h3>
-                <h3>Replay Code: {post.replay_code}</h3>
-                <h3>{post.details}</h3>
+                <h2>{post.fields.battletag} - {post.fields.personal_sr} {post.fields.role}</h2>
+                <h3>Lobby SR: {post.fields.lobby_sr}</h3>
+                <h3>Replay Code: {post.fields.replay_code}</h3>
+                <h3>{post.fields.details}</h3>
             </div>
             <div className="buttonDiv" style={buttonDiv}>
                 <button style={button} onClick={(e) => {edit(post)}}>Edit Replay Information</button>
