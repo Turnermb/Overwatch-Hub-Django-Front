@@ -66,7 +66,7 @@ function App(props) {
   }
 
   const updatePost = async (post) => {
-    const response = await fetch(url + props.post.pk, {
+    const response = await fetch(url + props.posts.pk, {
       method: "put",
       headers: {
         "Content-Type": "application/json"
@@ -78,7 +78,7 @@ function App(props) {
   }
 
   const deletePost = async (post) => {
-    const response = await fetch(url + props.post.pk, {
+    const response = await fetch(url + props.posts.pk, {
       method: "delete"
     })
 
