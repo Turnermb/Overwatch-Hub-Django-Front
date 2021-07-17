@@ -65,13 +65,13 @@ function App(props) {
     props.history.push("/edit")
   }
 
-  const updatePost = async (post) => {
-    const response = await fetch(url + props.posts.pk, {
+  const updatePost = async (formData) => {
+    const response = await fetch(url + targetPost.pk, {
       method: "put",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(post)
+      body: JSON.stringify(formData)
     })
 
     getPosts()
