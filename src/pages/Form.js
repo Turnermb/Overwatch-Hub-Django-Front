@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 const Form = ({initialPost, handleSubmit, history}) => {
     // Initiate form with initialPost state
-    const [formData, setFormData] = useState(initialPost)
+    const [formData, setFormData] = useState(initialPost.fields)
     console.log("===============", initialPost)
 
     // Handle Change function

@@ -61,6 +61,7 @@ function App(props) {
   }
 
   const getTargetPost = async (post) => {
+    console.log("======getTargetPost========", post)
     setTargetPost(post)
     props.history.push("/edit")
   }
@@ -78,7 +79,7 @@ function App(props) {
   }
 
   const deletePost = async (post) => {
-    const response = await fetch(url + props.posts.pk, {
+    const response = await fetch(url + post.pk, {
       method: "delete"
     })
 
