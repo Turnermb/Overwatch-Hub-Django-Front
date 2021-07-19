@@ -40,8 +40,8 @@ const SinglePost = (props, {posts, match, edit, deletePost}) => {
                 <h3>{post.fields.details}</h3>
             </div>
             <div className="buttonDiv" style={buttonDiv}>
-                <button style={button} onClick={(e) => {props.edit(post.fields)}}>Edit Replay Information</button>
-                <button style={button} onClick={(e) => {props.deletePost(post.fields)}}>Delete Replay Information</button>
+                <button style={button} onClick={(e) => {props.edit(post)}}>Edit Replay Information</button>
+                <button style={button} onClick={(e) => {props.deletePost(post)}}>Delete Replay Information</button>
                 <Link to="/">
                     <button style={button}>Back</button>
                 </Link>
