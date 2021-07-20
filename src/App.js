@@ -61,13 +61,12 @@ function App(props) {
   }
 
   const getTargetPost = async (post) => {
-    console.log("======getTargetPost========", post)
     setTargetPost(post)
     props.history.push("/edit")
   }
 
   const updatePost = async (formData) => {
-    const response = await fetch(url + targetPost.pk, {
+    const response = await fetch(url + [targetPost.pk], {
       method: "put",
       headers: {
         "Content-Type": "application/json"

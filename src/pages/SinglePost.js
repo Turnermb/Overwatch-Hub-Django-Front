@@ -4,7 +4,6 @@ import {Link} from "react-router-dom"
 const SinglePost = (props, {posts, match, edit, deletePost}) => {
     const id = parseInt(props.match.params.id)
     const post = props.posts.find((post) => post.pk === id)
-    console.log(post)
 
     const div = {
         color: "white",
